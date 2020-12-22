@@ -10,5 +10,6 @@ you can also use it to train your typing
 ## TO DO:
 [ ] more quotes 
 
-[] select if you want long or short quotes
-[] seperate file for quotes
+[ ] select if you want long or short quotes
+ 
+[ ] seperate file for quotes
