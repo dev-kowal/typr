@@ -1,0 +1,20 @@
+{
+  "name": "typr",
+  "version": "1.0.0",
+  "description": "Typr is a little project i made for fun\r using typr you can test yourself and seeing how fast you can type.\r you can also use it to train your typing",
+  "main": "quotes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-kowal/typr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-kowal/typr/issues"
+  },
+  "homepage": "https://github.com/dev-kowal/typr#readme"
+}
