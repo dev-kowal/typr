@@ -1,7 +1,6 @@
 // inside script.js
 // all of our quotes
 // store the list of words and the index of the word the player is currently typing
-let lastwpm = 30;
 let wpm = 0;
 let words = [];
 let wordIndex = 0;
@@ -31,6 +30,8 @@ document.addEventListener('keyup', function onEvent(e) {
     }
 });
 
+setTimeout(() => {document.getElementById("start").click();}, 1);
+
 // at the end of script.js
 document.getElementById('start').addEventListener('click', async () => {
 
@@ -46,7 +47,6 @@ document.getElementById('start').addEventListener('click', async () => {
       quoteElement.innerHTML = cTimer;
       await new Promise(r => setTimeout(r, 1000));
     }
-    //await new Promise(r => setTimeout(r, 1000));
     const quote = quotes();
     // Put the quote into an array of words
     words = quote.split(' ');
@@ -85,9 +85,9 @@ typedValueElement.addEventListener('input', () => {
       wpm = (words.length/elapsedTime).toFixed(0);
       const message = `WPM: ${wpm}`;
       messageElement.innerText = message;
-      if (wpm > lastwpm) {
+      if (wpm > avgwpm) {
         messageElement.className = 'better';
-      } else if (wpm < lastwpm) {
+      } else if (wpm < avgwpm) {
         messageElement.className = 'worse';
       } else {
         messageElement.className = '';
@@ -95,8 +95,7 @@ typedValueElement.addEventListener('input', () => {
       avgwpm = Math.floor((Number(avgwpm)+Number(wpm)+Number(lastwpm))/3);
       localStorage.setItem('avgwpm',avgwpm);
       avgwpmElement.innerHTML = `averge WPM: ${avgwpm}`;
-      
-      lastwpm = wpm;
+
       wpm = 0;
       
       typedValueElement.blur();

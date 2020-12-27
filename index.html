@@ -1,33 +1,34 @@
-<!-- inside index.html -->
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="a free typing test for everyone. made with vanilla javascript opensource on github">
-  <meta name="keywords" content="typr, typr-test, typr github, https://kowal05.github.io/typr/, type, typing-test, typing test, wpm test, wpm , avarge wpm, words per minute, what my wpm, typing speed, test, keyboard">
-  <meta name="author" content="@ez_kowal">
-  <meta name="google-site-verification" content="Sm8897dJkN80CwSOYo9cQFqkJKSa_5vr8L-wrZiy4Aw" />
-  <title>Typr</title>
-  <link rel="icon" href="typr.png"  type="image/icon type">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
-  <link rel='stylesheet' href='style.css'>
+    <meta charset="UTF-8">
+    <meta name="description" content="a free typing test for everyone. made with vanilla javascript opensource on github">
+    <meta name="keywords" content="typr, typr-test, typr github, https://kowal05.github.io/typr/, type, typing-test, typing test, wpm test, wpm , avarge wpm, words per minute, what my wpm, typing speed, test, keyboard">
+    <meta name="author" content="@ez_kowal">
+    <title>Typr</title>
+    <link rel="icon" href="typr.png"  type="image/icon type">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet"> 
+    <link rel='stylesheet' href='style.css'>
+  </head>
 </head>
 <body>
+  <script>
+    function test() {
+      window.location.href='test.html';
+    }
+    document.addEventListener('keyup', function onEvent(e) {
+        if (e.keyCode === 13) {
+          document.getElementsById('sn').click();
+        }
+    });
+  </script>
   <div id="top">
-    <h1>Typr</h1>
-    <p>Test youself or <br> practice your typing speed.</p>
+    <h1><a href="index.html">Typr</a></h1>
+    <p>Test youself or, <br> practice your typing speed.</p>
   </div>
-  <br><br>
-  <p id='quote'></p> <!-- This will display our quote -->
-  <br><br>
-  <div>
-    <input type='text' aria-label='current word' id='typed-value' class='input input-box'/> <!-- The textbox for typing -->
-    <button type='button' id='start' class='input start-button'>Start</button> <!-- To start the game -->
-  </div>
-  <p id='message'></p> <!-- This will display any status messages -->
-  <P id="avgwpm"></P>
-  <script src="quotes.js"></script>
-  <script src='script.js'></script>
+  <button id="sn" class="button" onclick="test()"> Start Now</button>
 </body>
+<footer>
+  By <a href="">kowal</a>
+</footer>
 </html>
-

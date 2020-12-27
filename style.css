@@ -1,13 +1,5 @@
-html, body {
-    height: 100%;
-}
-
-html {
-    display: table;
-    margin: auto;
-}
-
 body {
+    height: 100%;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -17,7 +9,23 @@ body {
     align-items: center;
 }
 
-h1 {font-size: 420%;}
+html {
+    height: 100%;
+    display: table;
+    margin: auto;
+}
+
+
+
+h1, a:link, a:visited, a:active {
+    color: #bebebe;
+    font-size: 250%;
+    text-decoration: none;
+}
+a:hover, button:hover  {
+    color: #ffffff;
+}
+
 p {font-size: x-large;}
 
 #typed-value {  
@@ -30,16 +38,18 @@ p {font-size: x-large;}
     background-color: #1b1b1b;
 }
 
-.start-button {
+.button {
     font-size: x-large;
     text-align: center;
     border-style: hidden;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     border-radius: 3px;
+    padding: 0.4%;
     color:#bebebe;
     background-color: #1b1b1b;
 }
+
 
 #quote {
     margin: 0 auto;
