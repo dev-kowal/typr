@@ -1,4 +1,4 @@
-# typr.github.io
+# typr
 
 ## what is this?
 Typr is a little project i made for fun
