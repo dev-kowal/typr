@@ -1,0 +1,23 @@
+<!-- inside index.html -->
+<html>
+<head>
+  <%- include('partials/meta') %>
+  <title><%- title[1]%></title>
+</head>
+<body>
+  <%- include('partials/header') %>
+  <br><br><br><br><br>
+  <p id='quote'></p> <!-- This will display our quote -->
+  <br><br>
+  <div>
+    <input type='text' aria-label='current word' id='typed-value' class='input input-box'/> <!-- The textbox for typing -->
+    <br><br>
+    <button type='button' id='start' class='input button'>Start</button> <!-- To start the game -->
+  </div>
+    <p id='message'></p> <!-- This will display any status messages -->
+    <P id="avgwpm"></P>
+    <script src="js/quotes.js"></script>
+    <script src='js/script.js'></script>
+  </body>
+</html>
+
